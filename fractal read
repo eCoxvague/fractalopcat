@@ -14,6 +14,8 @@ Linux için windows alt sistemlerini aktif hale getirin
 
 wsl --install yada wsl.exe --install Ubuntu yada wsl --install Ubuntu kurulacak.
 
+Bundan sonrasında macOs kullanıcılarıda katılabilir. Windows tarafıda aynı şekilde devam etsin.
+
 git clone https://github.com/CATProtocol/cat-token-box
 
 cd cat-token-box
