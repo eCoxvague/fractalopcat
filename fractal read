@@ -26,15 +26,17 @@ node -v
 npm -v
 
 yarn install
+
 Hata alırsanız aşağıdaki kodu çalıştırın.
 npm uninstall -g yarn
 sudo npm install -g yarn
-Hata devam ederse
-1.sudo npm install --global yarn
-2.mkdir ~/.npm-global
+
+Hata devam ederse eğer
+sudo npm install --global yarn
+mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
-3.export PATH=~/.npm-global/bin:$PATH
-4.npm install --global yarn
+export PATH=~/.npm-global/bin:$PATH
+npm install --global yarn
 
 yarn build
 
