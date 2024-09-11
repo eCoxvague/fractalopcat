@@ -1,0 +1,67 @@
+Linux Windows ve Fractal Node Kurulum İşlemleri
+
+https://git-scm.com/downloads
+https://nodejs.org/en/download
+https://docs.docker.com/get-started/get-docker/?_gl=1*1rrv5kr*_gcl_au*NjY5MDk5NzU2LjE3MjQwNjk4MDk.*_ga*MTU2OTI1OTUzNC4xNzI0MDY5ODA5*_ga_XJWPQMJYHQ*MTcyNjA1MTMyNS4zLjEuMTcyNjA1MTMzNi40OS4wLjA
+
+Yukardaki dosyaları bilgisayarınıza kurunuz.
+
+Windows için "WIN + r" tuşuna basın ve açılan yerde "control" yazın.
+
+Açılan yerde "Programlar" - "Programlar ve Özellikler" - "Windows özelliklerini aç veya kapat" tıklayın.
+
+
+wsl --install yada wsl.exe --install Ubuntu yada wsl --install Ubuntu kurulacak.
+
+git clone https://github.com/CATProtocol/cat-token-box
+
+cd cat-token-box
+
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+node -v
+npm -v
+
+yarn install
+yarn build
+
+cd packages/tracker
+yarn install
+yarn build
+
+docker compose up -d yada docker-compose up -d
+Settings (Ayarlar) > Resources > WSL Integration bölümü hata olursa duruma göre.
+
+cd ../../ && docker build -t tracker:latest .
+docker run -d \
+
+--name tracker \
+
+--add-host="host.docker.internal:host-gateway" \
+
+-e DATABASE_HOST="host.docker.internal" \
+
+-e RPC_HOST="host.docker.internal" \
+
+-p 3000:3000 \
+
+tracker:latest
+
+Sync durumunu kontrol etmek için http://127.0.0.1:3000/api
+
+Sync tamamlanınca cüzdan oluşturma işlemine geçiyoruz.
+
+d packages/cli
+
+yarn install
+
+yarn build
+
+yarn cli wallet create && yarn cli wallet address
+
+En son olarak mintlemek için aşağıdaki kodu kullanıyoruz. fee-rate duruma göre değişecek sats bakımından.
+
+yarn cli mint -i 45ee725c2c5993b3e4d308842d87e973bf1951f5f7a804b21e4dd964ecd12d6b_0 5 --fee-rate 250
+
