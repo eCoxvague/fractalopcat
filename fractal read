@@ -10,6 +10,7 @@ Windows için "WIN + r" tuşuna basın ve açılan yerde "control" yazın.
 
 Açılan yerde "Programlar" - "Programlar ve Özellikler" - "Windows özelliklerini aç veya kapat" tıklayın.
 
+Linux için windows alt sistemlerini aktif hale getirin
 
 wsl --install yada wsl.exe --install Ubuntu yada wsl --install Ubuntu kurulacak.
 
