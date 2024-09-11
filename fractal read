@@ -26,6 +26,8 @@ node -v
 npm -v
 
 yarn install
+Hata alırsanız aşağıdaki kodu çalıştırın.
+npm install -g yarn
 yarn build
 
 cd packages/tracker
