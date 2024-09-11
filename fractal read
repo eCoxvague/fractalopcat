@@ -27,6 +27,7 @@ npm -v
 
 yarn install
 Hata alırsanız aşağıdaki kodu çalıştırın.
+sudo apt-get remove yarn
 npm install -g yarn
 yarn build
 
