@@ -68,7 +68,7 @@ Sync durumunu kontrol etmek için http://127.0.0.1:3000/api
 
 Sync tamamlanınca cüzdan oluşturma işlemine geçiyoruz.
 
-d packages/cli
+cd packages/cli
 
 yarn install
 
